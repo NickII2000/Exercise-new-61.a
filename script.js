@@ -12,3 +12,28 @@ console.log(amountOfPages(5));
 console.log(amountOfPages(25));
 console.log(amountOfPages(1095));
 console.log(amountOfPages(185));
+
+function isPangram(string) {
+    const string2 = Array.from(string.toUpperCase());
+    const string3 = [];
+    string2.forEach((element, i, arr) => {
+        if (element !== ' ') {
+            string3.push(element);
+        }
+    });
+
+    // console.log(string3);
+    // console.log(new Set(string3));
+    // console.log(string3.length);
+    // console.log((new Set(string3)).size);
+
+    if (string3.length === (new Set(string3)).size) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+// console.log(isPangram('The quick brown fox jumps over the lazy dog'));
+console.log(isPangram('The quick'));
+console.log(isPangram('Hello world'));
