@@ -27,13 +27,13 @@ function isPangram(string) {
     // console.log(string3.length);
     // console.log((new Set(string3)).size);
 
-    if (string3.length === (new Set(string3)).size) {
+    if ((new Set(string3)).size === 26) {
         return true;
     } else {
         return false;
     }
 }
 
-// console.log(isPangram('The quick brown fox jumps over the lazy dog'));
-console.log(isPangram('The quick'));
+console.log(isPangram('The quick brown fox jumps over the lazy dog'));
+// console.log(isPangram('The quick'));
 console.log(isPangram('Hello world'));
