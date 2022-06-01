@@ -38,3 +38,19 @@ console.log(isPangram('The quick brown fox jumps over the lazy dog'));
 // console.log(isPangram('The quick'));
 console.log(isPangram('Hello world'));
 
+
+let lengthArr = 0;
+function deepCount(a) {
+    for (let i = 0; i < a.length; i++) {
+        lengthArr++;
+        if (Array.isArray(a)) {
+            deepCount(a[i]);
+        }
+    }
+    return lengthArr;
+}
+
+// console.log(deepCount([]));
+// console.log(deepCount([[]]));
+// console.log(deepCount([1, 2, [1, [2, 4]]]));
+console.log(deepCount([[[[[[[[[]]]]]]]]]));
