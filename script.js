@@ -1,12 +1,12 @@
 'use strict';
 
 function amountOfPages(summary) {
-    let n = 0;
-    do while (summary > 0) {
-
+    let i = 0;
+    while (summary > 0) {
+        summary -= String(++i).length;
     }
 
-    return n;
+    return i;
 }
 
 console.log(amountOfPages(1095));
