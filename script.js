@@ -76,11 +76,6 @@ function deepCount(a) {
     return count;
 }
 
-console.log(deepCount([]));
-console.log(deepCount([[]]));
-console.log(deepCount([1, 2, [1, [2, 4]]]));
-console.log(deepCount([[[[[[[[[]]]]]]]]]));
-
 
 // Вариант с методом reduce
 function deepCount(a) {
