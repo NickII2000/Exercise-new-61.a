@@ -68,6 +68,7 @@ console.log(deepCount([[]]));
 console.log(deepCount([1, 2, [1, [2, 4]]]));
 console.log(deepCount([[[[[[[[[]]]]]]]]]));
 
+
 // Вариант с циклом
 function deepCount(a) {
     let count = a.length;
