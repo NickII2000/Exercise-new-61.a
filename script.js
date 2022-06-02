@@ -38,6 +38,7 @@ console.log(isPangram('The quick brown fox jumps over the lazy dog'));
 // console.log(isPangram('The quick'));
 console.log(isPangram('Hello world'));
 
+
 // function deepCount(a) {
 //     let lengthArr = 0;
 //     function deepCount2(a) {
