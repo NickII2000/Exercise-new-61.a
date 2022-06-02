@@ -55,18 +55,13 @@ console.log(isPangram('Hello world'));
 
 
 function deepCount(a) {
-    let lengthArr = 0;
-    function deepCount2(a) {
-
-        for (let i = 0; i < a.length; i++) {
-            lengthArr++;
-            if (Array.isArray(a)) {
-                deepCount2(a[i]);
-            }
+    let count = a.length;
+    for (let i = 0; i < a.length; i++) {
+        if (Array.isArray(a[i])) {
+            count += deepCount(a[i]);
         }
-        return lengthArr;
     }
-    return deepCount2(a);
+    return count;
 }
 
 console.log(deepCount([]));
@@ -80,6 +75,12 @@ function deepCount(a) {
     for (let i = 0; i < a.length; i++) if (Array.isArray(a[i])) count += deepCount(a[i]);
     return count;
 }
+
+console.log(deepCount([]));
+console.log(deepCount([[]]));
+console.log(deepCount([1, 2, [1, [2, 4]]]));
+console.log(deepCount([[[[[[[[[]]]]]]]]]));
+
 
 // Вариант с методом reduce
 function deepCount(a) {
